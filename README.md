@@ -1,2 +1,2 @@
 # linuxprac
-linux practis
+linux practics
