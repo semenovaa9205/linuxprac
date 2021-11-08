@@ -3,14 +3,18 @@
 //#include<stdio.h>
 #include <curses.h>
 int main(){
- const int def=3;
+ #define def=3;
+ 
  int sumbol=0;
  WINDOW*win;
- win=newwin (LINES-2*def,COLS-2*def,def,def);
+ initscr();
+ noecho();
+ printw("window:");
+ refresh();
+ win=newwin (LINES-2*def ,COLS-2*def,def,def);
  keypad(win,TRUE);
  scrollok(win,TRUE);
  do{  
- 
      wprintw(win,"Key: %d,Name: %s/n",sumbol,keyname(sumbol));
      box(win,0,0);
      wrefresh(win);
@@ -20,4 +24,3 @@ int main(){
 endwin();
 return 0; 
 }
-
