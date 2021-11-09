@@ -6,6 +6,11 @@ int main(){
  const int def=3;
  int sumbol=0;
  WINDOW*win;
+ initscr();
+ noecho();
+ cbreak();
+ printw("window");
+ refresh();
  win=newwin (LINES-2*def,COLS-2*def,def,def);
  keypad(win,TRUE);
  scrollok(win,TRUE);
