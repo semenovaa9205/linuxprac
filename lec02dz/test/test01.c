@@ -3,7 +3,7 @@
  
 #include <curses.h>
 
-
+g 
 int main(){
     
 initscr();
