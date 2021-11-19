@@ -1,4 +1,11 @@
-#include<iostream>
+#include <curses.h>
+#include<iostream> 
+  
 int main(){
-    return 0;
+    
+initscr();
+addstr("hello,world!!!!!!!!!!!!!");
+getch();
+endwin();
+return 0; 
 }
