@@ -7,11 +7,16 @@ int main(){
  int sumbol=0;
  WINDOW*win;
  initscr();
- noecho();
+ 
  cbreak();
- printw("window");
+ start_color();
+ 
+ init_pair(1,COLOR_YELLOW,COLOR_WHITE);
+ printw("TextEdit:");
  refresh();
+ init_pair(2,COLOR_RED,COLOR_WHITE);
  win=newwin (LINES-2*def,COLS-2*def,def,def);
+ 
  keypad(win,TRUE);
  scrollok(win,TRUE);
  do{  
